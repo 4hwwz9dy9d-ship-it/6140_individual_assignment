@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>让教师被技术成全 · 个人数字化反思作品集 · 王俊杰</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23143B35'/%3E%3Cpath d='M8 22V10h2.4v8.2H18V22H8zm6.4-6.4V10h2.4v5.6h-2.4zM20 22V10h7.2v2.3h-4.6v2.3h4v2.2h-4V22H20z' fill='%23F5F6F2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html">INT6140 · <b>未来工作 ePortfolio</b></a>
+    <div class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="profile.html">01 职业画像</a>
+      <a href="tech.html">02 科技剖析</a>
+      <a href="wellbeing.html">03 福祉设计</a>
+      <a href="reflection.html">04 反思路线图</a>
+      <a href="ethics.html">规范与声明</a>
+    </div>
+  </div>
+</nav>
+
+<header class="pagehero">
+  <div class="wrap">
+    <div class="crumb">Personal Digital Portfolio · 王俊杰</div>
+    <h1>让教师被技术成全<br>生成式AI时代，教育行业的<span class="hl">人才重塑</span>与福祉设计</h1>
+    <p class="sub">一个数据科学本科出身、做过教育产品经理、现在读 ETFW 硕士的学生，想认真回答一个问题：人工智能来了，一千八百多万中国教师的雇佣形态、技能要求和职业幸福感会变成什么样？以及，我自己接下来的路该怎么走。</p>
+    <div style="margin-top:26px;display:flex;flex-wrap:wrap;gap:10px">
+      <span style="background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:100px;font-size:13px;color:#EAF2EF">香港教育大学 GIET · ETFW 硕士</span>
+      <span style="background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:100px;font-size:13px;color:#EAF2EF">数据科学与大数据 本科</span>
+      <span style="background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:100px;font-size:13px;color:#EAF2EF">教育产品经理实习</span>
+      <span style="background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:100px;font-size:13px;color:#EAF2EF">四年教学经验</span>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:56px">
+  <div class="wrap">
+    <div class="cols" style="align-items:center">
+      <div class="reveal">
+        <div class="sec-no" style="margin-bottom:10px">◆</div>
+        <div class="sec-title" style="margin-bottom:16px">为什么是教师？<small>Why Teachers — 一个被忽视的「未来工作」样本</small></div>
+        <p class="lead">聊「AI 会不会抢工作」，大家想到的通常是程序员、设计师。我想反过来看一个常被忽略的群体：<strong>中国 1800 多万专任教师</strong>。队伍很庞大，但很少有人用「人才」的视角认真讨论过他们的处境。</p>
+        <p>教师这个职业很适合作为观察样本：工作一半是标准化的（备课、批改、行政），一半高度依赖人（关怀、引领），高负荷与低掌控感长期并存；再加上<strong>出生人口五年间下降了 55% 以上</strong>、教师队伍开始收缩，「怎么用技术放大现有教师的价值」就不只是一个技术问题，而是关系到教育质量和社会公平的公共议题。</p>
+        <p>看懂了教师，也就大致看懂了医生、社工、护理者这些「以人为业」的职业接下来要面对什么。这是我做这份作品集的出发点。</p>
+      </div>
+      <div class="reveal d2">
+        <div class="hero-visual"><img src="img/hero.png" alt="教师与AI协同的场景插画"></div>
+      </div>
+    </div>
+
+    <div class="reveal d1" style="margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden">
+      <div style="background:var(--card);padding:22px 18px;text-align:center">
+        <div class="stat-num" data-target="38.2" style="font-family:var(--serif);font-weight:900;font-size:28px;color:var(--amber)">0</div>
+        <div class="mut" style="margin-top:5px;font-size:12.5px;line-height:1.45">中小学教师处于「亚健康」<br>（《教育家》81,387份问卷）</div>
+      </div>
+      <div style="background:var(--card);padding:22px 18px;text-align:center">
+        <div class="stat-num" data-target="39.09" style="font-family:var(--serif);font-weight:900;font-size:28px;color:var(--amber)">0</div>
+        <div class="mut" style="margin-top:5px;font-size:12.5px;line-height:1.45">教师存在抑郁、焦虑倾向<br>（同上调查）</div>
+      </div>
+      <div style="background:var(--card);padding:22px 18px;text-align:center">
+        <div class="stat-num" data-target="14.77" style="font-family:var(--serif);font-weight:900;font-size:28px;color:var(--jade)">0</div>
+        <div class="mut" style="margin-top:5px;font-size:12.5px;line-height:1.45">教师每天使用AI工具<br>（19省53万样本）</div>
+      </div>
+      <div style="background:var(--card);padding:22px 18px;text-align:center">
+        <div class="stat-num" data-target="96.1" style="font-family:var(--serif);font-weight:900;font-size:28px;color:var(--jade)">0</div>
+        <div class="mut" style="margin-top:5px;font-size:12.5px;line-height:1.45">教师愿意主动学习生成式AI<br>（8.6万教师报告）</div>
+      </div>
+    </div>
+    <p class="mut reveal" style="margin-top:10px;font-size:12.5px">数据来源见「规范与声明」页参考文献 [3][4][6]，正文引用均经原始报告核实。</p>
+  </div>
+</section>
+
+<section style="background:linear-gradient(180deg,#EEF2EC 0%,var(--paper) 100%)">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="sec-no">▣</div><div class="sec-title">作品集导览<small>四个模块 · 五个页面 · 一次完整的认知旅程</small></div></div>
+    <div class="mod-grid">
+      <a class="mod-card reveal" href="profile.html">
+        <div class="mno">01</div>
+        <span class="mtag">MODULE 1 · 25%→个人底色</span>
+        <h3>个人职业画像与未来工作哲学</h3>
+        <p>一个「技术 × 教育 × 产品」的交叉体如何看未来工作？包含可交互的能力自评雷达与个人价值主张。</p>
+        <span class="go">进入模块 →</span>
+        <div class="art">多模态制品：<b>交互式能力雷达</b> · 三线成长档案 · CV 中英双版</div>
+      </a>
+      <a class="mod-card reveal d1" href="tech.html">
+        <div class="mno">02</div>
+        <span class="mtag">MODULE 2 · 科技深度剖析</span>
+        <h3>前沿科技剖析：生成式AI重塑教师职业</h3>
+        <p>从痛点数据到真实案例，从工作流重构到技能图谱迁移，再到全球化与人口结构的深层约束。</p>
+        <span class="go">进入模块 →</span>
+        <div class="art">多模态制品：<b>4 张数据图表</b> · 传统 vs AI 工作流对比 · 双城案例</div>
+      </a>
+      <a class="mod-card reveal d2" href="wellbeing.html">
+        <div class="mno">03</div>
+        <span class="mtag">MODULE 3 · 福祉创新设计</span>
+        <h3>未来工作场所与教师福祉创新设计</h3>
+        <p>「AI 教师助手」四阶段机制 + 时间返还计算器 + 提示词模板库，减负如何真正转化为幸福。</p>
+        <span class="go">进入模块 →</span>
+        <div class="art">多模态制品：<b>时间返还计算器</b> · 场景化提示词库 · 福祉环境原型</div>
+      </a>
+      <a class="mod-card reveal d3" href="reflection.html">
+        <div class="mno">04</div>
+        <span class="mtag">MODULE 4 · 反思与路线图</span>
+        <h3>学习反思历程与职业适应路线图</h3>
+        <p>Gibbs 反思循环手风琴、三次认知转折、1–2 年战略路线图，以及一个「未来工作观」小测。</p>
+        <span class="go">进入模块 →</span>
+        <div class="art">多模态制品：<b>Gibbs 交互手风琴</b> · 认知转折对照 · 互动自测</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="sec-no">◆</div><div class="sec-title">本作品集的社会价值与个人价值<small>Social & Personal Value — 作业要求的回应</small></div></div>
+    <div class="cols">
+      <div class="card reveal">
+        <div class="h3" style="font-family:var(--serif);font-size:17px;color:var(--ink)">社会价值：为 1800 万教师争取「技术红利」</div>
+        <p>当 AI 的效率红利只被少数数字化程度高的行业与学校享有，城乡之间、校际之间的教育差距会被进一步拉大。本作品集提出的<span class="em">低成本、即学即用</span>的教师赋能机制，明确把<strong>乡村学校与年长教师</strong>纳入适配对象——技术进步的意义不在于制造新鸿沟，而在于弥合旧鸿沟。</p>
+        <p class="mut" style="margin-top:8px">→ 深入论述见「科技剖析」2.7–2.8 与「福祉设计」的社会溢出部分。</p>
+      </div>
+      <div class="card reveal d1">
+        <div class="h3" style="font-family:var(--serif);font-size:17px;color:var(--ink)">个人价值：一个「成全者」的职业定位</div>
+        <p>我不想成为和老师抢饭碗的人，我想做<span class="em">帮老师用好技术的人</span>。数据科学让我看得懂技术的边界，教学经历让我看得见真实的痛点，人力资源的学习让我懂得把人的感受放进制度里。这三样凑在一起，就是我想走的方向。</p>
+        <p class="mut" style="margin-top:8px">→ 个人使命宣言见「反思与路线图」页的「价值与责任」部分。</p>
+      </div>
+    </div>
+    <div class="insight-box reveal d1" style="margin-top:20px">
+      <strong>阅读提示：</strong>全站为多页面结构，可循导航逐模块浏览，也可从任一模块卡进入；每页底部均有「上一模块 / 下一模块」接力导航。核心中文论述约 2,000+ 字（引用除外），全部多模态制品均可交互。
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="home">王俊杰 · 香港教育大学 GIET · INT6140 个人数字化反思作品集</div>
+    <div class="fnav">
+      <a href="profile.html">职业画像</a><a href="tech.html">科技剖析</a><a href="wellbeing.html">福祉设计</a><a href="reflection.html">反思路线图</a><a href="ethics.html">规范与声明</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:12px;padding-top:14px;border-top:1px solid rgba(255,255,255,.16);font-size:13px">
+    <span>数据来源均已标注 · 生成式AI使用声明见「规范与声明」页</span>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" title="返回顶部">↑</button>
+<script src="shared.js"></script>
+<script>
+// 首页数字滚动
+(function(){
+  var nums = document.querySelectorAll('.stat-num');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      var el = e.target, target = parseFloat(el.getAttribute('data-target'));
+      var start = performance.now(), duration = 1500;
+      (function update(now){
+        var p = Math.min((now - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (target * eased).toFixed(2);
+        if (p < 1) requestAnimationFrame(update); else el.textContent = target.toFixed(2);
+      })(start);
+    });
+  }, {threshold:.4});
+  nums.forEach(function(n){ io.observe(n); });
+})();
+</script>
+</body>
+</html>
