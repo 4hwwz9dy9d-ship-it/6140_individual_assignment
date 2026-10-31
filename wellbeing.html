@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>03 未来工作场所与教师福祉创新设计 · 王俊杰</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23143B35'/%3E%3Cpath d='M8 22V10h2.4v8.2H18V22H8zm6.4-6.4V10h2.4v5.6h-2.4zM20 22V10h7.2v2.3h-4.6v2.3h4v2.2h-4V22H20z' fill='%23F5F6F2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/shared.css">
+<script src="assets/echarts.min.js"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html">INT6140 · <b>未来工作 ePortfolio</b></a>
+    <div class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="profile.html">01 职业画像</a>
+      <a href="tech.html">02 科技剖析</a>
+      <a href="wellbeing.html">03 福祉设计</a>
+      <a href="reflection.html">04 反思路线图</a>
+      <a href="ethics.html">规范与声明</a>
+    </div>
+  </div>
+</nav>
+
+<header class="pagehero">
+  <div class="wrap">
+    <div class="crumb">Module 03 · Workplace Environment &amp; Workforce Well-being Design</div>
+    <h1>未来工作场所与<br><span class="hl">教师福祉创新设计</span></h1>
+    <p class="sub">运用设计思维，把「AI 减负」转化为可落地的机制与环境——减下来的时间，必须真正变成教师的幸福。</p>
+  </div>
+</header>
+
+<!-- 3.1 -->
+<section id="s31">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="sec-no">03</div><div class="sec-title">痛点识别：从教师（雇员）视角出发<small>Empathize &amp; Define — 设计思维五阶段全程贯穿</small></div></div>
+    <div class="card reveal">
+      <p class="lead">运用设计思维，我从教师这一「雇员」群体的真实处境出发，识别出三重叠加的技术性职场痛点：</p>
+      <div style="display:flex;gap:8px;margin:20px 0 8px;flex-wrap:wrap">
+        <span style="background:var(--ink);color:#fff;font-size:12.5px;font-weight:600;padding:5px 14px;border-radius:100px">Empathize 共情 ✓</span>
+        <span style="background:var(--ink);color:#fff;font-size:12.5px;font-weight:600;padding:5px 14px;border-radius:100px">Define 定义 ✓</span>
+        <span style="background:var(--amber);color:#fff;font-size:12.5px;font-weight:600;padding:5px 14px;border-radius:100px">Ideate 构思 ↓</span>
+        <span style="background:var(--jade-soft);color:var(--ink-2);font-size:12.5px;font-weight:600;padding:5px 14px;border-radius:100px;border:1px solid rgba(46,125,107,.2)">Prototype 原型 ↓</span>
+        <span style="background:var(--jade-soft);color:var(--ink-2);font-size:12.5px;font-weight:600;padding:5px 14px;border-radius:100px;border:1px solid rgba(46,125,107,.2)">Test 测试 ↓</span>
+      </div>
+      <div class="trio">
+        <div class="t"><span class="tag">痛点一</span><h4>认知门槛高</h4><p>很多文科出身的老师不会编程，误以为「用AI=学写代码」，觉得比自己手动改卷、做PPT还难。其实根本不用写代码——会用现成工具、会提需求就行。44.8% 的教师困于「不会用、学习成本高」，本质是被「技术想象」吓退。</p></div>
+        <div class="t"><span class="tag">痛点二</span><h4>工具碎片化</h4><p>需在多个平台间反复切换，缺乏一站式解决方案，67.4% 的教师反映「没有合适的 AI 教育资源」。工具越多，负担越重——「数字减负」变成了「数字增负」。</p></div>
+        <div class="t"><span class="tag">痛点三</span><h4>伦理与负荷焦虑</h4><p>担忧学生过度依赖 AI、数据隐私泄露、生成内容不准确；同时批改与备课的高负荷挤压了教师的休息与陪伴时间——「省下来的时间被新任务填满」是最深的隐忧。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3.2 -->
+<section id="s32" style="background:linear-gradient(180deg,#EEF2EC 0%,var(--paper) 100%)">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="sec-no">3.2</div><div class="sec-title">创新方案：「AI 教师助手」四阶段机制<small>Ideate — 以教师福祉为中心、以人才发展为目标的机制设计</small></div></div>
+    <div class="card reveal">
+      <p>区别于常规「上几节课」的培训，我设计了一套<span class="em">以教师福祉为中心、以人才发展为目标的四阶段机制</span>：</p>
+      <div class="steps">
+        <div class="step-card">
+          <span class="no">01</span>
+          <div class="ph">认知唤醒</div>
+          <div class="win">第 1–2 周</div>
+          <p>用真实教学场景工作坊演示 AI 能做什么（拍照阅卷、一键生成教案、自动制作课件），消除「AI 很复杂」的认知障碍，建立「我也能做到」的信心。</p>
+          <div class="out">产出：认知破除工作坊 + 信心基线调研</div>
+          <span class="steps-arrow">→</span>
+        </div>
+        <div class="step-card">
+          <span class="no">02</span>
+          <div class="ph">工具上手</div>
+          <div class="win">第 3–4 周</div>
+          <p>精选 3–5 个「即学即用」的 AI 工具，配套按场景预设好的「提示词模板库」，教师替换关键词即可上手——本页下方提供了<b>可交互的模板库样例</b>。</p>
+          <div class="out">产出：场景化提示词模板库 + 工具速查卡</div>
+          <span class="steps-arrow">→</span>
+        </div>
+        <div class="step-card">
+          <span class="no">03</span>
+          <div class="ph">场景深耕</div>
+          <div class="win">第 5–8 周</div>
+          <p>围绕备课、批改、学情、行政四大场景实战演练，每位教师产出一个「AI 赋能教学」案例，在教研组内分享，沉淀为校内最佳实践库。</p>
+          <div class="out">产出：个人AI教学案例 + 校级实践库</div>
+          <span class="steps-arrow">→</span>
+        </div>
+        <div class="step-card">
+          <span class="no">04</span>
+          <div class="ph">持续迭代</div>
+          <div class="win">长期</div>
+          <p>建立校内 AI 教师互助社群，定期分享心得、共同审核 AI 输出准确性、收集学生反馈，形成「使用—反馈—优化」的闭环。</p>
+          <div class="out">产出：社群机制 + 伦理守则落地</div>
+        </div>
+      </div>
+
+      <div class="quote">福祉机制的关键，不只是「教会用工具」，更是<span style="color:var(--amber)">「时间返还」与「伦理护航」</span>：把 AI 节省的时间制度化地转化为备课深化、学生陪伴与教师休息，防止「减负变增压」；并配套《教师 AI 伦理守则》与数据隐私保护。</div>
+
+      <div class="insight-box">
+        <strong>时间返还制度设计（关键福祉落点）：</strong><br>
+        • 批改时间节省的 60% 中，至少 30% 强制转化为「学生个别辅导/情感支持时段」；<br>
+        • 20% 转化为「深度备课与课程创新时段」；<br>
+        • 剩余部分明确为教师休息与个人发展时间，<strong>纳入校级工作量核算</strong>，避免「省下来的时间被新任务填满」。<br>
+        <span class="mut" style="display:block;margin-top:8px">→ 这套规则不是纸面文章：下方的「时间返还计算器」可以实时演算它能为你（或一位典型教师）换回多少生活。</span>
+      </div>
+    </div>
+
+    <!-- 时间返还计算器 -->
+    <div class="card reveal d1">
+      <div class="h2">⏱ 互动工具：时间返还计算器</div>
+      <p class="mut">拖动滑杆设定一位教师每周在三类事务上花费的时间（默认值来自中国教育科学研究院教师工作量调查的典型画像），系统将按本方案的 AI 替代率与时间返还规则实时演算。</p>
+      <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:26px;align-items:start">
+        <div>
+          <div class="slider-row"><span class="lab">每周作业批改</span><input type="range" min="2" max="15" value="8" id="inGrade"><span class="num" id="outGrade">8 小时</span></div>
+          <div class="slider-row"><span class="lab">每周备课制课件</span><input type="range" min="2" max="15" value="6" id="inPrep"><span class="num" id="outPrep">6 小时</span></div>
+          <div class="slider-row"><span class="lab">每周行政事务</span><input type="range" min="1" max="10" value="5" id="inAdmin"><span class="num" id="outAdmin">5 小时</span></div>
+          <div class="insight-box" style="margin-top:6px">
+            <div>本方案 AI 替代率（依据模块二案例证据）：</div>
+            <div style="margin-top:6px">批改 <b class="em">60%</b> · 备课 <b class="em">40%</b> · 行政 <b class="em">50%</b></div>
+          </div>
+          <div id="calcResult" style="background:linear-gradient(140deg,#143B35,#1E5A4E);color:#EAF2EF;border-radius:14px;padding:20px 22px;margin-top:8px">
+            <div style="font-size:13px;color:#C9DED7">按每学年 40 个教学周计算，这位教师每学年将返还</div>
+            <div style="font-family:var(--serif);font-weight:900;font-size:34px;color:#F0B45A;margin:4px 0"><span id="resTotal">0</span> 小时</div>
+            <div style="font-size:13px;color:#C9DED7" id="resDetail">相当于 </div>
+          </div>
+        </div>
+        <div>
+          <div class="chart-title">返还时间的制度化分配</div>
+          <div class="chart-cap">依据时间返还规则自动分配</div>
+          <div id="donut" style="width:100%;height:300px"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 提示词模板库 -->
+    <div class="card reveal d1">
+      <div class="h2">📋 互动工具：场景化提示词模板库（可复制）</div>
+      <p class="mut">机制第二阶段「工具上手」的核心交付物。教师只需替换【】中的关键词，点击右上角按钮即可复制使用——降低门槛，就是最大的善意。</p>
+      <div class="tabs" id="pTabs">
+        <button class="tab-btn active" data-pane="pt1">备课设计</button>
+        <button class="tab-btn" data-pane="pt2">作业批改</button>
+        <button class="tab-btn" data-pane="pt3">学情分析</button>
+        <button class="tab-btn" data-pane="pt4">家校沟通</button>
+      </div>
+      <div class="tab-pane active" id="pt1">
+        <div class="prompt-card">
+          <button class="copy-btn">复制</button>
+          <span class="p-tag">教案生成</span>
+          <pre>你是一位有【10】年经验的【初中语文】教师。请为【八年级上册《背影》】设计一份 45 分钟的教案，要求：1. 包含导入、三个递进式主问题、小组活动与分层作业；2. 标注每个环节的时间与设计意图；3. 针对【学困生】给出简化任务选项。</pre>
+        </div>
+        <div class="prompt-card">
+          <button class="copy-btn">复制</button>
+          <span class="p-tag">课件大纲</span>
+          <pre>基于以下教案生成一份【16页】课件大纲（JSON格式：页码/标题/要点/建议配图描述），风格简洁、每页不超过5个要点，重点内容用设问句呈现以促进课堂互动。教案：【粘贴教案】</pre>
+        </div>
+      </div>
+      <div class="tab-pane" id="pt2">
+        <div class="prompt-card">
+          <button class="copy-btn">复制</button>
+          <span class="p-tag">作文评语</span>
+          <pre>以下是学生的一篇【记叙文】作文。请按「亮点2条+建议2条」结构写一段【60字以内】的鼓励性评语，语气面向【初二学生】，避免空泛套话；不直接给分数，只指出进步方向。作文：【粘贴作文】</pre>
+        </div>
+        <div class="prompt-card">
+          <button class="copy-btn">复制</button>
+          <span class="p-tag">错题归因</span>
+          <pre>这是全班【45】名学生在【一次数学测验】中的错题分布数据。请：1. 按知识点聚类归因（概念不清/运算失误/审题偏差）；2. 为每类错误给出一条教学调整建议；3. 列出需要个别辅导的【高频错题前三】。数据：【粘贴统计表】</pre>
+        </div>
+      </div>
+      <div class="tab-pane" id="pt3">
+        <div class="prompt-card">
+          <button class="copy-btn">复制</button>
+          <span class="p-tag">分层练习</span>
+          <pre>针对【二次函数】单元，学生掌握度数据如下：【A层15人掌握90%、B层20人掌握70%、C层10人掌握50%】。请为三层学生各设计【5道】难度递进的练习题并附答案与解析，A层侧重综合应用，C层侧重基础巩固。</pre>
+        </div>
+      </div>
+      <div class="tab-pane" id="pt4">
+        <div class="prompt-card">
+          <button class="copy-btn">复制</button>
+          <span class="p-tag">家长沟通</span>
+          <pre>请帮我起草一条发给【初二学生家长】的微信消息：学生近两周作业质量下降、上课走神。要求：先肯定【2个】具体优点，再客观描述现象（不贴标签），最后以「想和您聊聊孩子最近的状态」的邀请口吻结尾，全文【120字】以内，语气温暖专业。</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3.3 环境 -->
+<section id="s33">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="sec-no">3.3</div><div class="sec-title">物理与虚拟环境：福祉的「场所」设计<small>Prototype — 工作场所环境创新，回应 CILO2</small></div></div>
+    <div class="cols" style="align-items:center">
+      <div class="card reveal">
+        <div class="h3">物理环境：「教师福祉站」三区设计</div>
+        <p><strong>① 静音恢复舱</strong>：利用课间与午休时段的 15 分钟可预约隔音舱，配人体工学躺椅与白噪音——针对 96.71% 教师睡眠不足的现实，把「恢复精力」变成被制度认可的正式安排，而非偷懒。</p>
+        <p><strong>② 共研共创角</strong>：开放式茶咖区，配大屏与白板，教师在此完成「AI 输出人工审核 + 集体备课」——把机制第三阶段的案例分享嵌入日常空间，协作自然发生。</p>
+        <p><strong>③ 代际结对墙</strong>：展示「年轻教师 × 资深教师」结对海报与互助成果，让技术互助成为组织归属感的载体（对应课程「团队归属感」要求）。</p>
+      </div>
+      <div class="reveal d1">
+        <div class="hero-visual"><img src="assets/img/wellbeing.png" alt="教师福祉环境概念插画"></div>
+      </div>
+    </div>
+    <div class="card reveal d1">
+      <div class="h3">虚拟环境：校内「AI 教学共创平台」</div>
+      <p>一个轻量级校内平台（可用现有工具拼装，零开发成本启动），包含四个模块：<strong>提示词库</strong>（按学科/场景检索，即本页模板库的全校版）、<strong>案例广场</strong>（教师上传 AI 教学案例，点赞沉淀最佳实践）、<strong>审核看板</strong>（AI 输出抽检记录 + 学生反馈双轨校验）、<strong>时间账户</strong>（可视化每位教师「返还时间」的分配去向，让福祉可被看见、可被审计）。</p>
+      <div class="insight-box" style="margin-bottom:0">
+        <strong>为什么「时间账户」重要：</strong>任何福祉机制若不可度量，就会在执行中悄然失效。时间账户把「AI 省下的时间去哪了」变成校级层面可核查的数据——这是「心理契约」的制度化表达，也是本方案区别于一般培训方案的细节所在。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3.4 -->
+<section id="s34" style="background:linear-gradient(180deg,#EEF2EC 0%,var(--paper) 100%)">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="sec-no">3.4</div><div class="sec-title">预期效果、评估与社会溢出<small>Test — 四维评估 + 超越校墙的价值</small></div></div>
+    <div class="card reveal">
+      <div class="eff">
+        <div class="row"><div class="lab">备课时间</div><div class="bar"><i style="width:70%"></i></div><div class="val">减少 ≥ 30%</div></div>
+        <div class="row"><div class="lab">作业批改时间</div><div class="bar"><i style="width:90%"></i></div><div class="val">减少 ≥ 60%</div></div>
+        <div class="row"><div class="lab">职业倦怠感</div><div class="bar"><i style="width:55%"></i></div><div class="val">显著下降</div></div>
+        <div class="row"><div class="lab">工具独立使用率</div><div class="bar"><i style="width:80%"></i></div><div class="val">3个月内 ≥ 80%</div></div>
+      </div>
+      <p class="mut">评估采用「效率 + 福祉 + 质量 + 采纳」四维指标，AI 内容准确率经「教师审核 + 学生反馈」双轨校验。福祉维度将引入简易倦怠量表与睡眠质量追踪，确保「减负」真正转化为教师主观幸福感的提升。</p>
+    </div>
+    <div class="cols">
+      <div class="card reveal d1">
+        <div class="h3">社会溢出：乡村适配版方案</div>
+        <p>本方案的核心工具（拍照批改、提示词模板、互助社群）均为<strong>零采购成本</strong>：只需一部手机与免费工具。乡村适配版进一步简化为「三件套」：一次 90 分钟工作坊 + 一本打印版提示词手册 + 一个微信群互助社群。乡村教师最缺的不是工具，而是<strong>被看见的支持</strong>——这版方案已保留给未来公益落地。</p>
+      </div>
+      <div class="card reveal d2">
+        <div class="h3">溢出效应：从教师福祉到学生福祉</div>
+        <p>教师是学生情绪环境的「第一基础设施」。研究表明教师职业倦怠会显著传导至课堂氛围与学生发展。返还给教师的时间中，30% 直接流向学生个别辅导与情感支持——<strong>教师福祉方案，本质上同时是学生福祉方案</strong>。这正是「以人为本职场理念」的完整闭环：成就教师，即成就课堂里的每一个人。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="pager">
+    <a href="tech.html"><span class="dir">← 上一模块</span><span class="pt">02 前沿科技深度剖析</span></a>
+    <a href="reflection.html" class="next"><span class="dir">下一模块 →</span><span class="pt">04 反思与路线图</span></a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="home">王俊杰 · 香港教育大学 GIET · INT6140 个人数字化反思作品集</div>
+    <div class="fnav">
+      <a href="profile.html">职业画像</a><a href="tech.html">科技剖析</a><a href="wellbeing.html">福祉设计</a><a href="reflection.html">反思路线图</a><a href="ethics.html">规范与声明</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" title="返回顶部">↑</button>
+<script src="assets/shared.js"></script>
+<script>
+// 标签页（提示词库）
+document.querySelectorAll('#pTabs .tab-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('#pTabs .tab-btn').forEach(function(b){b.classList.remove('active')});
+    document.querySelectorAll('.tab-pane').forEach(function(p){p.classList.remove('active')});
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.pane).classList.add('active');
+  });
+});
+
+// 复制按钮
+document.querySelectorAll('.copy-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var text = btn.parentElement.querySelector('pre').textContent;
+    var done = function(){ btn.textContent='已复制 ✓'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent='复制'; btn.classList.remove('done'); }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done);
+    } else {
+      var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done();
+    }
+  });
+});
+
+// 时间返还计算器 + 环形图
+(function(){
+  var rates = {grade:.6, prep:.4, admin:.5};
+  var weeks = 40;
+  var donut = echarts.init(document.getElementById('donut'));
+  function draw(){
+    var g=+document.getElementById('inGrade').value, p=+document.getElementById('inPrep').value, a=+document.getElementById('inAdmin').value;
+    document.getElementById('outGrade').textContent=g+' 小时';
+    document.getElementById('outPrep').textContent=p+' 小时';
+    document.getElementById('outAdmin').textContent=a+' 小时';
+    var savedWeek = g*rates.grade + p*rates.prep + a*rates.admin;
+    var savedYear = Math.round(savedWeek * weeks);
+    document.getElementById('resTotal').textContent = savedYear;
+    var tut = savedYear*.3, prep2 = savedYear*.2, rest = savedYear - tut - prep2;
+    document.getElementById('resDetail').textContent = '其中 ' + Math.round(tut) + ' 小时流向学生辅导、' + Math.round(prep2) + ' 小时流向深度备课、' + Math.round(rest) + ' 小时成为教师的休息与发展时间';
+    donut.setOption({
+      tooltip:{trigger:'item',confine:true,formatter:'{b}：{c} 小时（{d}%）'},
+      legend:{bottom:0,textStyle:{color:'#6B7C76',fontSize:12}},
+      series:[{type:'pie',radius:['48%','70%'],center:['50%','44%'],
+        label:{show:true,position:'center',formatter:function(){return '每学年\n返还 '+savedYear+' 小时'},fontSize:14,fontFamily:'Noto Serif SC',fontWeight:700,color:'#143B35',lineHeight:22},
+        data:[
+          {value:Math.round(tut),name:'学生个别辅导与情感支持',itemStyle:{color:'#2E7D6B'}},
+          {value:Math.round(prep2),name:'深度备课与课程创新',itemStyle:{color:'#C8872B'}},
+          {value:Math.round(rest),name:'教师休息与个人发展',itemStyle:{color:'#8FB8AC'}}
+        ]}]
+    });
+  }
+  ['inGrade','inPrep','inAdmin'].forEach(function(id){document.getElementById(id).addEventListener('input',draw)});
+  draw();
+  window.addEventListener('resize',function(){donut.resize()});
+})();
+</script>
+</body>
+</html>
