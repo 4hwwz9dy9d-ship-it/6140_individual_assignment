@@ -45,11 +45,11 @@
       <div class="acc" id="gibbsAcc">
         <div class="acc-item">
           <div class="acc-head"><span class="gno">DESCRIPTION</span>描述 · 我看见了什么<span class="caret">▼</span></div>
-          <div class="acc-body"><div class="acc-body-in"><h5>从「工具」到「工作本质」</h5>课程初期，我把 AI 视为「提高效率的技术工具」。随着学习深入，我意识到它正在重新定义「工作的本质」——竞争力从「谁会写代码」转向「谁会提问、谁有判断力」。当我在课堂上第一次系统看到自动化对常规岗位的渗透数据时，我意识到教师行业绝不会是例外，只是节奏不同。</div></div>
+          <div class="acc-body"><div class="acc-body-in"><h5>从「工具」到「工作本质」</h5>课程初期，我把 AI 视为「提高效率的技术工具」。随着学习深入，我意识到它正在重新定义「工作的本质」——<span class="mark">竞争力从「谁会写代码」转向「谁会提问、谁有判断力」</span>。当我在课堂上第一次系统看到自动化对常规岗位的渗透数据时，我意识到教师行业绝不会是例外，只是节奏不同。</div></div>
         </div>
         <div class="acc-item">
           <div class="acc-head"><span class="gno">FEELINGS</span>感受 · 我的情绪变化<span class="caret">▼</span></div>
-          <div class="acc-body"><div class="acc-body-in"><h5>焦虑 → 释然 → 聚焦</h5>我曾因「被 AI 取代」而产生真实的职业焦虑——这种焦虑在亲手用 AI 代理完成网页与小游戏后转为释然：我体会到「AI 是放大器，不是替代者」。这种焦虑对我而言并不抽象：做家教那几年，晚上十一点还在改卷、第二天一早继续上课是常态；实习时也亲眼见过老师因为要在三个平台之间来回切换，试了两周就放弃了 AI 工具。正是这些具体的场景，让「未来工作」对我来说不是纸面讨论。但释然之后是新的张力：交叉背景既是优势，也可能变成「什么都懂一点但都不深」的陷阱。诚实地记录这种张力，是我这段时间最大的成长——它促使我把精力聚焦到「教育 × 人才」这一纵深。</div></div>
+          <div class="acc-body"><div class="acc-body-in"><h5>焦虑 → 释然 → 聚焦</h5>我曾因「被 AI 取代」而产生真实的职业焦虑——这种焦虑在亲手用 AI 代理完成网页与小游戏后转为释然：<span class="mark">我体会到「AI 是放大器，不是替代者」</span>。这种焦虑对我而言并不抽象：做家教那几年，晚上十一点还在改卷、第二天一早继续上课是常态；实习时也亲眼见过老师因为要在三个平台之间来回切换，试了两周就放弃了 AI 工具。正是这些具体的场景，让「未来工作」对我来说不是纸面讨论。但释然之后是新的张力：交叉背景既是优势，也可能变成「什么都懂一点但都不深」的陷阱。诚实地记录这种张力，是我这段时间最大的成长——它促使我把精力聚焦到「教育 × 人才」这一纵深。</div></div>
         </div>
         <div class="acc-item">
           <div class="acc-head"><span class="gno">EVALUATION</span>评估 · 什么最有价值<span class="caret">▼</span></div>
@@ -245,7 +245,9 @@ document.querySelectorAll('#gibbsAcc .acc-head').forEach(function(h){
     else if (total <= 10) msg = '你已经具备「协同思维」的雏形——开始关心准确率、把关与人的处境。你和我在这学期的中段大概旗鼓相当。推荐看看模块三的「时间返还计算器」，它把你的直觉变成了一套可落地的机制。';
     else msg = '我们是同路人！你几乎完整地复现了本作品集的核心理念：人机分工、时间返还、双轨校验、代际结对。这份共识让我更相信：教师被技术成全，不是幻想，而是可以被设计出来的现实。';
     document.getElementById('quizMsg').textContent = msg;
-    document.getElementById('quizResult').classList.add('show');
+    var res = document.getElementById('quizResult');
+    res.classList.add('show');
+    setTimeout(function(){ res.scrollIntoView({behavior:'smooth', block:'nearest'}); }, 80);
   }
   document.getElementById('quizReset').addEventListener('click', function(){
     answers = {};

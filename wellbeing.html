@@ -103,10 +103,10 @@
 
       <div class="insight-box">
         <strong>时间返还制度设计（关键福祉落点）：</strong><br>
-        • 批改时间节省的 60% 中，至少 30% 强制转化为「学生个别辅导/情感支持时段」；<br>
+        • AI 节省的全部工作时间中，30% 强制转化为「学生个别辅导/情感支持时段」；<br>
         • 20% 转化为「深度备课与课程创新时段」；<br>
-        • 剩余部分明确为教师休息与个人发展时间，<strong>纳入校级工作量核算</strong>，避免「省下来的时间被新任务填满」。<br>
-        <span class="mut" style="display:block;margin-top:8px">→ 这套规则不是纸面文章：下方的「时间返还计算器」可以实时演算它能为你（或一位典型教师）换回多少生活。</span>
+        • 剩余 50% 明确为教师休息与个人发展时间，<strong>纳入校级工作量核算</strong>，避免「省下来的时间被新任务填满」。<br>
+        <span class="mut" style="display:block;margin-top:8px">→ 这套「30/20/50」分配规则同样适用于批改、备课、行政三类节省时间的合并总量：下方的「时间返还计算器」可以实时演算它能为你（或一位典型教师）换回多少生活。</span>
       </div>
     </div>
 
@@ -131,14 +131,14 @@
     <!-- 时间返还计算器 -->
     <div class="card reveal d1">
       <div class="h2">⏱ 互动工具：时间返还计算器</div>
-      <p class="mut">拖动滑杆设定一位教师每周在三类事务上花费的时间（默认值来自中国教育科学研究院教师工作量调查的典型画像），系统将按本方案的 AI 替代率与时间返还规则实时演算。数字只是估算，真实课堂肯定比公式乱得多——拖着玩就行，别太当真，方向对就好。</p>
+      <p class="mut">拖动滑杆设定一位教师每周在三类事务上花费的时间（默认值来自中国教育科学研究院教师工作量调查的典型画像），系统将按本方案的 AI 替代率与「30/20/50」时间返还规则实时演算——三类节省时间合并后，30% 流向学生辅导、20% 流向深度备课、50% 归还教师。数字只是估算，真实课堂肯定比公式乱得多——拖着玩就行，别太当真，方向对就好。</p>
       <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:26px;align-items:start">
         <div>
           <div class="slider-row"><span class="lab">每周作业批改</span><input type="range" min="2" max="15" value="8" id="inGrade"><span class="num" id="outGrade">8 小时</span></div>
           <div class="slider-row"><span class="lab">每周备课制课件</span><input type="range" min="2" max="15" value="6" id="inPrep"><span class="num" id="outPrep">6 小时</span></div>
           <div class="slider-row"><span class="lab">每周行政事务</span><input type="range" min="1" max="10" value="5" id="inAdmin"><span class="num" id="outAdmin">5 小时</span></div>
           <div class="insight-box" style="margin-top:6px">
-            <div>本方案 AI 替代率（依据模块二案例证据）：</div>
+            <div>本方案 AI 替代率（依据模块二案例推演的保守估计，非实证测量）：</div>
             <div style="margin-top:6px">批改 <b class="em">60%</b> · 备课 <b class="em">40%</b> · 行政 <b class="em">50%</b></div>
           </div>
           <div id="calcResult" style="background:linear-gradient(140deg,#143B35,#1E5A4E);color:#EAF2EF;border-radius:14px;padding:20px 22px;margin-top:8px">
@@ -287,18 +287,25 @@ document.querySelectorAll('#pTabs .tab-btn').forEach(function(btn){
   });
 });
 
-// 复制按钮
+// 复制按钮（带降级处理）
 document.querySelectorAll('.copy-btn').forEach(function(btn){
   btn.addEventListener('click', function(){
     var text = btn.parentElement.querySelector('pre').textContent;
     var done = function(){ btn.textContent='已复制 ✓'; btn.classList.add('done');
       setTimeout(function(){ btn.textContent='复制'; btn.classList.remove('done'); }, 1800); };
+    var fail = function(){
+      try {
+        var ta=document.createElement('textarea'); ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.select();
+        var ok = document.execCommand('copy'); document.body.removeChild(ta);
+        if (ok) { done(); return; }
+      } catch(e) {}
+      btn.textContent='复制失败，请长按手动复制';
+      setTimeout(function(){ btn.textContent='复制'; }, 2400);
+    };
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(done);
-    } else {
-      var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta);
-      ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done();
-    }
+      navigator.clipboard.writeText(text).then(done).catch(fail);
+    } else { fail(); }
   });
 });
 
