@@ -1,0 +1,14 @@
+{
+  "name": "bear-ai-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "小熊伙伴 AI 后端：阿里云百炼文字对话，含儿童医疗安全护栏",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node server.local.js",
+    "dev": "node server.local.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

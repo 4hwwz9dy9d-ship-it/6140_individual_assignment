@@ -3,178 +3,305 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>让教师被技术成全 · 个人数字化反思作品集 · 王俊杰</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23143B35'/%3E%3Cpath d='M8 22V10h2.4v8.2H18V22H8zm6.4-6.4V10h2.4v5.6h-2.4zM20 22V10h7.2v2.3h-4.6v2.3h4v2.2h-4V22H20z' fill='%23F5F6F2'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css">
+<title>小熊术前小课堂 · 首页</title>
+<link rel="icon" type="image/png" href="assets/bear/favicon.png">
+<style>
+:root{
+  --sky:#bfe6f5;--sky-deep:#5db4dd;--sun:#ffd166;--coral:#ff8a70;--mint:#7fd8be;
+  --grape:#a78bfa;--ink:#3d4f5c;--ink-soft:#6b7f8c;--cream:#fff8ee;--card:#fff;
+  --line:#f0e4d3;--shadow:0 12px 32px rgba(93,140,160,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:80px}
+body{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+/* 顶栏 */
+.topnav{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(255,251,242,.92);backdrop-filter:blur(10px);border-bottom:2px dashed rgba(255,138,112,.25)}
+.topnav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px;color:#4a6275}
+.brand svg{width:34px;height:34px}
+.brand-bear{width:36px;height:36px;border-radius:50%;flex:none;box-shadow:0 2px 8px rgba(80,150,140,.22)}
+.top-links{display:flex;gap:6px}
+.top-links a{font-size:13.5px;font-weight:700;padding:8px 14px;border-radius:999px;color:var(--ink-soft);transition:.2s}
+.top-links a:hover,.top-links a.here{background:rgba(255,209,102,.4);color:var(--ink)}
+.nav-toggle{display:none;border:none;background:rgba(255,209,102,.35);border-radius:12px;font-size:19px;line-height:1;padding:9px 13px;cursor:pointer;color:#4a6275}
+@media(max-width:680px){
+  .nav-toggle{display:block}
+  .top-links{display:none;position:absolute;top:62px;left:0;right:0;flex-direction:column;gap:4px;padding:12px 22px 16px;background:rgba(255,251,242,.98);border-bottom:2px dashed rgba(255,209,102,.4);box-shadow:0 14px 26px rgba(93,140,160,.12)}
+  .top-links.open{display:flex}
+  .top-links a{padding:12px 14px}
+}
+
+/* ===== Hero ===== */
+.hero{position:relative;overflow:hidden;padding:120px 0 64px;
+  background:
+    radial-gradient(640px 400px at 88% 4%,rgba(255,209,102,.4),transparent 62%),
+    radial-gradient(560px 380px at 4% 88%,rgba(127,216,190,.36),transparent 62%),
+    linear-gradient(168deg,#d8f0fa 0%,#eaf7fb 52%,#fdf6ec 100%);}
+.hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
+@media(max-width:880px){.hero .wrap{grid-template-columns:1fr;text-align:center}.hero-left{display:flex;flex-direction:column;align-items:center}.hero .sub{margin-left:auto;margin-right:auto}}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:800;color:#4a6275;background:rgba(255,255,255,.8);border:2px solid rgba(93,180,221,.45);border-radius:999px;padding:8px 18px;margin-bottom:20px}
+.hero h1{font-size:clamp(30px,4.8vw,50px);font-weight:900;line-height:1.3;color:#33526b}
+.hero h1 .hi{color:var(--coral);position:relative;display:inline-block;z-index:0}
+.hero h1 .hi::after{content:"";position:absolute;left:0;right:0;bottom:5px;height:11px;background:rgba(255,209,102,.65);border-radius:8px;z-index:-1}
+.hero .sub{margin-top:18px;font-size:clamp(15px,1.9vw,17.5px);color:var(--ink-soft);max-width:520px}
+.hero-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.cta{display:inline-flex;align-items:center;gap:8px;font-size:15.5px;font-weight:900;border-radius:999px;padding:14px 30px;transition:.2s;box-shadow:0 10px 24px rgba(51,82,107,.16)}
+.cta-main{background:linear-gradient(135deg,var(--coral),var(--sun));color:#fff}
+.cta-sub{background:#fff;color:#2e6f94;border:2px solid rgba(93,180,221,.5);box-shadow:none}
+.cta:hover{transform:translateY(-3px)}
+/* 右侧视觉 */
+.hero-visual{position:relative}
+.hero-visual .v-img{border-radius:30px;border:5px solid #fff;box-shadow:0 24px 52px rgba(51,82,107,.26);overflow:hidden;animation:float 5s ease-in-out infinite}
+.hero-visual .v-img img,.hero-visual .v-img svg{width:100%;display:block}
+.v-chip{position:absolute;background:#fff;border-radius:16px;padding:10px 16px;font-size:13px;font-weight:800;color:#33526b;box-shadow:0 12px 26px rgba(51,82,107,.2);animation:float 4s ease-in-out infinite}
+.v-chip small{display:block;font-size:11px;color:var(--ink-soft);font-weight:700}
+.v-chip.c1{top:-16px;left:-14px;animation-delay:.4s}
+.v-chip.c2{bottom:34px;right:-14px;animation-delay:1.2s}
+.v-bear{position:absolute;bottom:-30px;left:-26px;width:110px;filter:drop-shadow(0 12px 20px rgba(51,82,107,.25))}
+@media(max-width:880px){.v-bear{display:none}.v-chip.c1{left:6px}.v-chip.c2{right:6px}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.deco{position:absolute;font-size:40px;opacity:.7;animation:drift 9s ease-in-out infinite;pointer-events:none;z-index:1}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-16px) rotate(6deg)}}
+
+/* 数据条 */
+.strip{padding:26px 0 10px}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:760px){.strip-grid{grid-template-columns:1fr 1fr}}
+.s-item{background:#fff;border-radius:20px;border:2px solid var(--line);box-shadow:var(--shadow);padding:16px 14px;text-align:center;transition:.2s}
+.s-item:hover{transform:translateY(-4px)}
+.s-item i{font-style:normal;font-size:24px}
+.s-item b{display:block;font-size:15px;color:#33526b;margin-top:4px}
+.s-item span{font-size:12px;color:var(--ink-soft)}
+
+/* ===== 三扇门 ===== */
+.doors{padding:66px 0 84px}
+.doors-head{text-align:center;margin-bottom:40px}
+.doors-head h2{font-size:clamp(24px,3.4vw,36px);font-weight:900;color:#33526b}
+.doors-head p{margin-top:10px;color:var(--ink-soft)}
+.door-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:860px){.door-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}}
+.door{position:relative;background:var(--card);border-radius:30px;overflow:hidden;cursor:pointer;border:3px solid transparent;box-shadow:var(--shadow);transition:transform .22s,border-color .22s,box-shadow .22s;display:flex;flex-direction:column}
+.door:hover{transform:translateY(-8px);box-shadow:0 22px 48px rgba(51,82,107,.2)}
+.door:active{transform:translateY(-2px) scale(.98)}
+.door.d-kid:hover{border-color:var(--sun)}
+.door.d-parent:hover{border-color:var(--mint)}
+.door.d-ar:hover{border-color:var(--sky-deep)}
+.door .d-pic{position:relative;height:170px;overflow:hidden}
+.door .d-pic img,.door .d-pic svg{width:100%;height:100%;display:block;object-fit:cover;transition:transform .4s ease}
+.door:hover .d-pic img,.door:hover .d-pic svg{transform:scale(1.06)}
+.door .d-pic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(255,248,238,.95))}
+.door .d-emoji-float{position:absolute;bottom:10px;left:18px;font-size:40px;z-index:2;filter:drop-shadow(0 6px 10px rgba(51,82,107,.3));transition:transform .25s}
+.door:hover .d-emoji-float{transform:scale(1.18) rotate(-8deg)}
+.door .d-body{padding:6px 24px 26px;display:flex;flex-direction:column;flex:1}
+.door b{font-size:20px;color:#33526b}
+.door p{font-size:13.5px;color:var(--ink-soft);margin-top:6px;flex:1}
+.door .d-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.door .d-tags i{font-style:normal;font-size:11.5px;font-weight:700;padding:4px 12px;border-radius:99px}
+.d-kid .d-tags i{background:rgba(255,209,102,.3);color:#8a6a1f}
+.d-parent .d-tags i{background:rgba(127,216,190,.3);color:#2e7a63}
+.d-ar .d-tags i{background:rgba(93,180,221,.22);color:#2e6f94}
+.door .d-go{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:900;font-size:14.5px;color:#fff;border-radius:999px;padding:11px 26px;transition:.2s;align-self:flex-start}
+.d-kid .d-go{background:var(--sun);color:#6b4e0f;box-shadow:0 8px 18px rgba(255,209,102,.45)}
+.d-parent .d-go{background:var(--mint);color:#fff;box-shadow:0 8px 18px rgba(127,216,190,.45)}
+.d-ar .d-go{background:var(--sky-deep);color:#fff;box-shadow:0 8px 18px rgba(93,180,221,.45)}
+.door:hover .d-go{transform:translateX(4px)}
+.door .d-new{position:absolute;top:14px;right:14px;z-index:3;background:var(--coral);color:#fff;font-size:12px;font-weight:900;border-radius:99px;padding:5px 14px;box-shadow:0 6px 14px rgba(255,138,112,.5)}
+
+/* 怎么用 */
+.howto{background:#fdf3e4;padding:60px 0}
+.howto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+@media(max-width:760px){.howto-grid{grid-template-columns:1fr}}
+.h-step{background:#fff;border-radius:24px;padding:24px;border:2px solid var(--line);box-shadow:var(--shadow);position:relative;text-align:center}
+.h-step .h-no{position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:34px;height:34px;border-radius:50%;background:var(--sun);color:#6b4e0f;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(255,209,102,.5);font-size:15px}
+.h-step:nth-child(2) .h-no{background:var(--mint);color:#fff}
+.h-step:nth-child(3) .h-no{background:var(--sky-deep);color:#fff}
+.h-step i{font-style:normal;font-size:36px;display:block;margin-top:8px}
+.h-step b{display:block;font-size:16px;color:#33526b;margin-top:8px}
+.h-step p{font-size:13px;color:var(--ink-soft);margin-top:6px}
+
+/* 结语 */
+.closing{background:linear-gradient(160deg,#5db4dd,#7fd8be);color:#fff;text-align:center;padding:60px 0;position:relative;overflow:hidden}
+.closing::before{content:"";position:absolute;inset:0;background:radial-gradient(480px 240px at 50% 0%,rgba(255,255,255,.28),transparent 65%)}
+.closing .wrap{position:relative;z-index:2}
+.closing h2{font-size:clamp(22px,3.4vw,34px);font-weight:900;text-shadow:0 2px 8px rgba(46,111,148,.3)}
+.closing p{margin-top:14px;font-size:15px;color:#eef9ff}
+footer{background:#33526b;color:#b9d2df;padding:30px 0;font-size:13px;text-align:center}
+footer b{color:#e6f3f9}
+footer .foot-note{margin-top:8px;font-size:12px;color:#8fb0c2;max-width:640px;margin:8px auto 0}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-visual .v-img,.v-chip,.deco{animation:none}.door:hover{transform:none}}
+</style>
+<link rel="stylesheet" href="css/bear-assistant.css">
 </head>
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
-
-<nav class="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="index.html">INT6140 · <b>未来工作 ePortfolio</b></a>
-    <div class="nav-links">
-      <a href="index.html">首页</a>
-      <a href="profile.html">01 职业画像</a>
-      <a href="tech.html">02 科技剖析</a>
-      <a href="wellbeing.html">03 福祉设计</a>
-      <a href="reflection.html">04 反思路线图</a>
-      <a href="ethics.html">规范与声明</a>
+<nav class="topnav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-bear" src="assets/bear/bear-logo.png" alt="" aria-hidden="true">
+      <span>小熊术前小课堂</span>
+    </a>
+    <div class="top-links">
+      <a href="index.html" class="here">🏠 首页</a>
+      <a href="kid.html">🧒 小朋友</a>
+      <a href="parent.html">👨‍👩‍👧 家长</a>
+      <a href="ar.html">📱 AR手册</a>
     </div>
+    <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">☰</button>
   </div>
 </nav>
+<script>
+(function(){
+  var navToggle=document.getElementById('navToggle');
+  var topLinks=document.querySelector('.top-links');
+  if(!navToggle||!topLinks)return;
+  navToggle.addEventListener('click',function(){
+    var open=topLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded',open?'true':'false');
+    navToggle.textContent=open?'✕':'☰';
+  });
+})();
+</script>
 
-<header class="pagehero">
+<header class="hero">
+  <span class="deco" style="top:14%;left:5%">☁️</span>
+  <span class="deco" style="bottom:20%;left:12%;animation-delay:2s">⭐</span>
+  <span class="deco" style="top:20%;right:6%;animation-delay:1s">🎈</span>
   <div class="wrap">
-    <div class="crumb">Personal Digital Portfolio · 王俊杰</div>
-    <h1>让教师被技术成全<br>生成式AI时代，教育行业的<span class="hl">人才重塑</span>与福祉设计</h1>
-    <p class="sub">一个数据科学本科出身、做过教育产品经理、现在读 ETFW 硕士的学生，想认真回答一个问题：人工智能来了，一千八百多万中国教师的雇佣形态、技能要求和职业幸福感会变成什么样？以及，我自己接下来的路该怎么走。</p>
-    <div style="margin-top:26px;display:flex;flex-wrap:wrap;gap:10px">
-      <a href="https://4hwwz9dy9d-ship-it.github.io/6140_individual_assignment/" target="_blank" rel="noopener" style="background:rgba(200,135,43,.22);border:1px solid rgba(240,180,90,.55);padding:7px 14px;border-radius:100px;font-size:13px;color:#F0B45A;text-decoration:none">🔗 公开访问网址：4hwwz9dy9d-ship-it.github.io/6140_individual_assignment</a>
-      <span style="background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:100px;font-size:13px;color:#EAF2EF">香港教育大学 AAPSEF · ETFW 硕士</span>
-      <span style="background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:100px;font-size:13px;color:#EAF2EF">数据科学与大数据 本科</span>
-      <span style="background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:100px;font-size:13px;color:#EAF2EF">教育产品经理实习</span>
-      <span style="background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:100px;font-size:13px;color:#EAF2EF">四年教学经验</span>
+    <div class="hero-left">
+      <div class="hero-badge">🏥 欢迎来到医院的小小预备班</div>
+      <h1>别害怕呀，<br>手术其实是<span class="hi">一场大冒险</span></h1>
+      <p class="sub">这是「小熊术前小课堂」——配合医院的 AR 术前宣教做的家庭版网站：小朋友玩游戏认识手术，爸爸妈妈拿工具做足准备，还能亲手试一试 AR 画面示意。</p>
+      <div class="hero-cta">
+        <a class="cta cta-main" href="kid.html">🧒 带孩子去玩 →</a>
+        <a class="cta cta-sub" href="parent.html">👨‍👩‍👧 我要准备功课</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="v-img">
+        <img src="assets/ar_hero.webp" alt="病房里医护、孩子与家长围着平板看悬浮的身体三维模型">
+      </div>
+      <span class="v-chip c1">📱 AR 效果示意<small>亲手看看画面里的标注</small></span>
+      <span class="v-chip c2">🏅 勇士勋章<small>每通过一个游戏就解锁一枚</small></span>
+      <img class="v-bear" src="assets/bear/bear-idle.webp" alt="小熊陪你一起认识手术">
     </div>
   </div>
 </header>
 
-<section style="padding-top:56px">
+<section class="strip">
   <div class="wrap">
-    <div class="cols" style="align-items:center">
-      <div class="reveal">
-        <div class="sec-no" style="margin-bottom:10px">◆</div>
-        <div class="sec-title" style="margin-bottom:16px">为什么是教师？<small>Why Teachers — 一个被忽视的「未来工作」样本</small></div>
-        <p class="lead">聊「AI 会不会抢工作」，大家想到的通常是程序员、设计师。我想反过来看一个常被忽略的群体：<strong>中国 1800 多万专任教师</strong>。队伍很庞大，但很少有人用「人才」的视角认真讨论过他们的处境。</p>
-        <p>教师这个职业很适合作为观察样本：工作一半是标准化的（备课、批改、行政），一半高度依赖人（关怀、引领），高负荷与低掌控感长期并存；再加上<strong>出生人口五年间下降了 55% 以上</strong>、教师队伍开始收缩，「怎么用技术放大现有教师的价值」就不只是一个技术问题，而是关系到教育质量和社会公平的公共议题。</p>
-        <p>看懂了教师，也就大致看懂了医生、社工、护理者这些「以人为业」的职业接下来要面对什么。这是我做这份作品集的出发点。</p>
-      </div>
-      <div class="reveal d2">
-        <div class="hero-visual"><img src="img/hero.png" alt="教师与AI协同的场景插画"></div>
-      </div>
+    <div class="strip-grid">
+      <div class="s-item reveal"><i>🎮</i><b>4 个小游戏</b><span>小朋友玩着玩着就懂了</span></div>
+      <div class="s-item reveal"><i>⏰</i><b>禁食计算器</b><span>输入手术时间自动倒推</span></div>
+      <div class="s-item reveal"><i>📱</i><b>AR 效果示意</b><span>看看器官怎么被标出来</span></div>
+      <div class="s-item reveal"><i>✅</i><b>7 项准备清单</b><span>打勾进度自动保存</span></div>
     </div>
-
-    <div class="reveal d1" style="margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden">
-      <div style="background:var(--card);padding:22px 18px;text-align:center">
-        <div class="stat-num" data-target="38.2%" style="font-family:var(--serif);font-weight:900;font-size:28px;color:var(--amber)">0</div>
-        <div class="mut" style="margin-top:5px;font-size:12.5px;line-height:1.45">中小学教师处于「亚健康」<br>（《教育家》81,387份问卷）</div>
-      </div>
-      <div style="background:var(--card);padding:22px 18px;text-align:center">
-        <div class="stat-num" data-target="39.09%" style="font-family:var(--serif);font-weight:900;font-size:28px;color:var(--amber)">0</div>
-        <div class="mut" style="margin-top:5px;font-size:12.5px;line-height:1.45">教师存在抑郁、焦虑倾向<br>（同上调查）</div>
-      </div>
-      <div style="background:var(--card);padding:22px 18px;text-align:center">
-        <div class="stat-num" data-target="14.77%" style="font-family:var(--serif);font-weight:900;font-size:28px;color:var(--jade)">0</div>
-        <div class="mut" style="margin-top:5px;font-size:12.5px;line-height:1.45">教师每天使用AI工具<br>（19省53万样本）</div>
-      </div>
-      <div style="background:var(--card);padding:22px 18px;text-align:center">
-        <div class="stat-num" data-target="96.1%" style="font-family:var(--serif);font-weight:900;font-size:28px;color:var(--jade)">0</div>
-        <div class="mut" style="margin-top:5px;font-size:12.5px;line-height:1.45">教师愿意主动学习生成式AI<br>（8.6万教师报告）</div>
-      </div>
-    </div>
-    <p class="mut reveal" style="margin-top:10px;font-size:12.5px">数据来源见「规范与声明」页参考文献 [7][10][15]，正文引用均经原始报告核实。</p>
   </div>
 </section>
 
-<section style="background:linear-gradient(180deg,#EEF2EC 0%,var(--paper) 100%)">
+<section class="doors" id="doors">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="sec-no">▣</div><div class="sec-title">作品集导览<small>四个模块 · 五个页面 · 一次完整的认知旅程</small></div></div>
-    <div class="mod-grid">
-      <a class="mod-card reveal" href="profile.html">
-        <div class="mno">01</div>
-        <span class="mtag">MODULE 1 · 25%→个人底色</span>
-        <h3>个人职业画像与未来工作哲学</h3>
-        <p>一个「技术 × 教育 × 产品」的交叉体如何看未来工作？包含可交互的能力自评雷达与个人价值主张。</p>
-        <span class="go">进入模块 →</span>
-        <div class="art">多模态制品：<b>交互式能力雷达</b> · 三线成长档案 · CV 中英双版</div>
+    <div class="doors-head reveal">
+      <h2>🚪 三扇神奇的大门</h2>
+      <p>小朋友、爸爸妈妈，还有想深入了解 AR 的大小朋友，各有各的入口</p>
+    </div>
+    <div class="door-grid">
+      <a class="door d-kid reveal" href="kid.html">
+        <div class="d-pic">
+          <img src="assets/organ_friends.webp" alt="五个拟人化器官卡通朋友">
+          <span class="d-emoji-float">🧒</span>
+        </div>
+        <div class="d-body">
+          <b>小朋友入口</b>
+          <p>玩 4 个小游戏的功夫，就明白手术是怎么回事啦！每通一关就多一枚勋章，还有会说话的小熊陪同讲解。</p>
+          <div class="d-tags"><i>🔍 身体探险</i><i>📖 冒险故事</i><i>🍲 晚餐大作战</i><i>🏆 问答闯关</i></div>
+          <span class="d-go">我要玩 →</span>
+        </div>
       </a>
-      <a class="mod-card reveal d1" href="tech.html">
-        <div class="mno">02</div>
-        <span class="mtag">MODULE 2 · 科技深度剖析</span>
-        <h3>前沿科技剖析：生成式AI重塑教师职业</h3>
-        <p>从痛点数据到真实案例，从工作流重构到技能图谱迁移，再到全球化与人口结构的深层约束。</p>
-        <span class="go">进入模块 →</span>
-        <div class="art">多模态制品：<b>4 张数据图表</b> · 传统 vs AI 工作流对比 · 双城案例</div>
+      <a class="door d-parent reveal" href="parent.html">
+        <div class="d-pic">
+          <img src="assets/seg3.webp" alt="妈妈在平板上核对术前清单，医生在旁讲解">
+          <span class="d-emoji-float">👨‍👩‍👧</span>
+        </div>
+        <div class="d-body">
+          <b>家长入口</b>
+          <p>禁食时间计算器、可打勾的准备清单、术后护理要点……把术前术后安排得明明白白。</p>
+          <div class="d-tags"><i>⏰ 禁食计算器</i><i>✅ 准备清单</i><i>💬 常见问题</i><i>🩹 术后护理</i></div>
+          <span class="d-go">我来准备 →</span>
+        </div>
       </a>
-      <a class="mod-card reveal d2" href="wellbeing.html">
-        <div class="mno">03</div>
-        <span class="mtag">MODULE 3 · 福祉创新设计</span>
-        <h3>未来工作场所与教师福祉创新设计</h3>
-        <p>「AI 教师助手」四阶段机制 + 时间返还计算器 + 提示词模板库，减负如何真正转化为幸福。</p>
-        <span class="go">进入模块 →</span>
-        <div class="art">多模态制品：<b>时间返还计算器</b> · 场景化提示词库 · 福祉环境原型</div>
-      </a>
-      <a class="mod-card reveal d3" href="reflection.html">
-        <div class="mno">04</div>
-        <span class="mtag">MODULE 4 · 反思与路线图</span>
-        <h3>学习反思历程与职业适应路线图</h3>
-        <p>Gibbs 反思循环手风琴、三次认知转折、1–2 年战略路线图，以及一个「未来工作观」小测。</p>
-        <span class="go">进入模块 →</span>
-        <div class="art">多模态制品：<b>Gibbs 交互手风琴</b> · 认知转折对照 · 互动自测</div>
+      <a class="door d-ar reveal" href="ar.html">
+        <span class="d-new">推荐先看</span>
+        <div class="d-pic">
+          <img src="assets/seg2.webp" alt="孩子戴AR眼镜看悬浮的三维模型">
+          <span class="d-emoji-float">📱</span>
+        </div>
+        <div class="d-body">
+          <b>AR 科普手册</b>
+          <p>可操作的 AR 效果示意 + 六步图文流程，看完就知道这套系统在医院里怎么用、用了有什么用。</p>
+          <div class="d-tags"><i>📱 AR 模拟器</i><i>🎬 演示动画</i><i>🧭 六步流程</i><i>🎓 阅读证书</i></div>
+          <span class="d-go">翻开手册 →</span>
+        </div>
       </a>
     </div>
   </div>
 </section>
 
-<section>
+<section class="howto">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="sec-no">◆</div><div class="sec-title">本作品集的社会价值与个人价值<small>Social & Personal Value — 作业要求的回应</small></div></div>
-    <div class="cols">
-      <div class="card reveal">
-        <div class="h3" style="font-family:var(--serif);font-size:17px;color:var(--ink)">社会价值：为 1800 万教师争取「技术红利」</div>
-        <p>当 AI 的效率红利只被少数数字化程度高的行业与学校享有，城乡之间、校际之间的教育差距会被进一步拉大。本作品集提出的<span class="em">低成本、即学即用</span>的教师赋能机制，明确把<strong>乡村学校与年长教师</strong>纳入适配对象——技术进步的意义不在于制造新鸿沟，而在于弥合旧鸿沟。</p>
-        <p class="mut" style="margin-top:8px">→ 深入论述见「科技剖析」2.7–2.8 与「福祉设计」的社会溢出部分。</p>
-      </div>
-      <div class="card reveal d1">
-        <div class="h3" style="font-family:var(--serif);font-size:17px;color:var(--ink)">个人价值：一个「成全者」的职业定位</div>
-        <p>我不想成为和老师抢饭碗的人，我想做<span class="em">帮老师用好技术的人</span>。数据科学让我看得懂技术的边界，教学经历让我看得见真实的痛点，人力资源的学习让我懂得把人的感受放进制度里。这三样凑在一起，就是我想走的方向。</p>
-        <p class="mut" style="margin-top:8px">→ 个人使命宣言见「反思与路线图」页的「价值与责任」部分。</p>
-      </div>
+    <div class="doors-head reveal">
+      <h2>🧸 第一次来？三步就用明白了</h2>
     </div>
-    <div class="insight-box reveal d1" style="margin-top:20px">
-      <strong>阅读提示：</strong>全站为多页面结构，可循导航逐模块浏览，也可从任一模块卡进入；每页底部均有「上一模块 / 下一模块」接力导航。核心中文论述约 2,000+ 字（引用除外），全部多模态制品均可交互。
+    <div class="howto-grid">
+      <div class="h-step reveal"><span class="h-no">1</span><i>🚪</i><b>选一扇门进去</b><p>小朋友去玩游戏，家长先看 AR 手册了解这套系统是干什么的。</p></div>
+      <div class="h-step reveal"><span class="h-no">2</span><i>🎲</i><b>一起玩、一起核对</b><p>孩子通关集勋章，家长用计算器算禁食时间、逐项打勾清单。</p></div>
+      <div class="h-step reveal"><span class="h-no">3</span><i>🏥</i><b>去医院前再回看</b><p>出门前把清单再对一遍；到了医院，医护会用正式的 AR 系统再讲一次。</p></div>
     </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <h2>看得懂的手术，才是不害怕的手术。</h2>
+    <p>选一扇门，现在就出发吧 👆</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div class="home">公开访问网址：https://4hwwz9dy9d-ship-it.github.io/6140_individual_assignment/<br><span style="font-size:13px;font-weight:600">王俊杰 · 香港教育大学应用政策研究及教育未来学院（AAPSEF） · INT6140 个人数字化反思作品集</span></div>
-    <div class="fnav">
-      <a href="profile.html">职业画像</a><a href="tech.html">科技剖析</a><a href="wellbeing.html">福祉设计</a><a href="reflection.html">反思路线图</a><a href="ethics.html">规范与声明</a>
-    </div>
-  </div>
-  <div class="wrap" style="margin-top:12px;padding-top:14px;border-top:1px solid rgba(255,255,255,.16);font-size:13px">
-    <span>数据来源均已标注 · 生成式AI使用声明见「规范与声明」页</span>
+    <b>🧸 小熊术前小课堂</b>
+    <p>AR 儿童术前可视化宣教 · 家庭版 · 共 4 个页面</p>
+    <p class="foot-note">本站内容为术前宣教辅助材料，不能替代医护团队的当面告知。禁食时间、术后护理等具体安排，请一律以您的医护团队指示为准。</p>
   </div>
 </footer>
 
-<button class="back-top" id="backTop" title="返回顶部">↑</button>
-<script src="shared.js"></script>
 <script>
-// 首页数字滚动
 (function(){
-  var nums = document.querySelectorAll('.stat-num');
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (!e.isIntersecting) return;
-      io.unobserve(e.target);
-      var el = e.target, target = parseFloat(el.getAttribute('data-target'));
-      var start = performance.now(), duration = 1500;
-      (function update(now){
-        var p = Math.min((now - start) / duration, 1);
-        var eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = (target * eased).toFixed(2);
-        if (p < 1) requestAnimationFrame(update); else el.textContent = target.toFixed(2);
-      })(start);
-    });
-  }, {threshold:.4});
-  nums.forEach(function(n){ io.observe(n); });
+"use strict";
+/* 滚动揭示 */
+var reveals=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});},{threshold:.1});
+  reveals.forEach(function(el){ro.observe(el);});
+}else{reveals.forEach(function(el){el.classList.add('in');});}
+/* 卡片入场错峰 */
+document.querySelectorAll('.door').forEach(function(d,i){d.style.transitionDelay=(i*90)+'ms';});
 })();
 </script>
+
+<!-- 小熊伙伴 · 独立模块（不改动原页面逻辑） -->
+<script src="js/bear-emotion.js"></script>
+<script src="js/bear-voice.js"></script>
+<script src="js/bear-ar-context.js"></script>
+<script src="js/bear-config.js"></script>
+<script src="js/bear-chat.js"></script>
+<script src="js/bear-assistant.js"></script>
 </body>
 </html>
